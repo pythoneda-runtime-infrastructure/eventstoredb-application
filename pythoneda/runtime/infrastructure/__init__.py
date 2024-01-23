@@ -1,8 +1,8 @@
 # vim: set fileencoding=utf-8
 """
-pythoneda/__init__.py
+pythoneda/runtime/infrastructure/__init__.py
 
-This file ensures pythoneda is a namespace.
+This file ensures pythoneda.runtime.infrastructure is a namespace.
 
 Copyright (C) 2024-today rydnr's pythoneda-runtime-infrastructure/eventstoredb-application
 
