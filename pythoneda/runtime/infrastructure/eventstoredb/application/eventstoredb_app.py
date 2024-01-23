@@ -20,15 +20,16 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 import asyncio
+from pythoneda.runtime.infrastructure.eventstoredb import EventStoreDB
 from pythoneda.runtime.infrastructure.eventstoredb.infrastructure.cli import (
     EventstoredbOptionsCli,
 )
 from pythoneda.runtime.infrastructure.eventstoredb.infrastructure.dbus import (
     EventstoredbDbusSignalEmitter,
 )
-from pythoneda.shared.application import PythonEDA
-from pythoneda.shared.runtime.infrastructure.events.infrastructure.eventstoredb.dbus import (
-    BootDbusSignalListener,
+from pythoneda.shared.application import enable, PythonEDA
+from pythoneda.runtime.infrastructure.eventstoredb.infrastructure.dbus import (
+    EventstoredbDbusSignalListener,
 )
 from typing import Dict
 
@@ -80,7 +81,7 @@ class EventstoredbApp(PythonEDA):
 if __name__ == "__main__":
     asyncio.run(
         EventstoredbApp.main(
-            "pythoneda.runtime.infrastructure.eventstoredb.EventstoredbApp"
+            "pythoneda.runtime.infrastructure.eventstoredb.application.EventstoredbApp"
         )
     )
 
